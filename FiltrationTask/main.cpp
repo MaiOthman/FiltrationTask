@@ -23,10 +23,10 @@ void PrintThePrimeNumbers(int number){
         cout << number << " ";
     }
 }
-void CalculatePrimeNumberInThisInterval(int start , int end){
+void calculatePrimeNumberInThisInterval(int start , int end){
     int counter = start+1;
     while(counter< end){
-        PrintTheNumbers(counter);
+        PrintThePrimeNumbers(counter);
         counter++;
     }
     cout << endl;
@@ -35,7 +35,7 @@ void CalculatePrimeNumberInThisInterval(int start , int end){
 int main(int argc, const char * argv[]) {
     int n , m;
     cin >> n >> m;
-    PrintPrimeNumber(n, m);
+    calculatePrimeNumberInThisInterval(n, m);
  
     return 0;
 }
