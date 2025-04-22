@@ -6,9 +6,36 @@
 //
 
 #include <iostream>
+using namespace std;
+
+bool isPrime(int number){
+    bool isPrime = true;
+    for(int j = 2 ; j <= sqrt(number); j++){
+        if(number%j==0){
+            isPrime = false;
+            break;
+        }
+    }
+    return isPrime;
+}
+void PrintThePrimeNumbers(int number){
+    if(isPrime(number)){
+        cout << number << " ";
+    }
+}
+void CalculatePrimeNumberInThisInterval(int start , int end){
+    int counter = start+1;
+    while(counter< end){
+        PrintTheNumbers(counter);
+        counter++;
+    }
+    cout << endl;
+}
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    int n , m;
+    cin >> n >> m;
+    PrintPrimeNumber(n, m);
+ 
     return 0;
 }
